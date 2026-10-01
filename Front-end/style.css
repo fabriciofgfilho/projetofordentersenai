@@ -1,0 +1,53 @@
+/* ==================== CONFIGURAÇÕES GERAIS ==================== */
+/* Seletor Universal (*): Seleciona todos os elementos do HTML da aplicação */
+* {
+    margin: 0;             /* Zera a margem externa padrão dada pelos navegadores a diversos elementos */
+    padding: 0;            /* Zera o preenchimento/espaçamento interno padrão de todos os elementos */
+    box-sizing: border-box; /* Faz com que padding e bordas sejam incluídos na largura e altura totais do elemento */
+}
+
+/* Regras aplicadas ao corpo (body) da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a lista de fontes padrão com alternativas de reserva */
+    background-color: #f4f6f9;                                    /* Cor de fundo cinza bem claro para toda a tela */
+    color: #333;                                                  /* Cor do texto principal (cinza escuro) para dar um bom contraste */
+    /* Configura o body para empilhar Header, Main e Footer perfeitamente */
+    display: flex;                                                /* Transforma o elemento body em um contêiner flexível */
+    flex-direction: column;                                       /* Empilha os elementos filhos (header, main e footer) em sentido vertical */
+    min-height: 100vh;                                            /* Garante que o corpo ocupe no mínimo 100% da altura visível da tela */
+}
+/* ==================== BARRA DE NAVEGAÇÃO (FLEXBOX) ==================== */
+/* Classe do cabeçalho superior */
+.navbar {
+    display: flex;                  /* Define a barra como contêiner flexível na horizontal */
+    justify-content: space-between; /* Distribui os 3 blocos (logo, menu, perfil) com espaço igual entre eles */
+    align-items: center;            /* Centraliza todos os itens do cabeçalho verticalmente */
+    background-color: #1e3a8a;       /* Cor de fundo em tom azul escuro institucional */
+    padding: 25px 40px;             /* Preenchimento interno (15px acima/abaixo e 40px nas laterais) */
+    color: white;                   /* Define a cor padrão do texto dentro da navbar como branca */
+}
+
+/* Classe de formatação do Logotipo */
+.logo {
+    font-size: 3.2rem;              /* Define o tamanho da fonte proporcional (1.5x o tamanho padrão) */
+    font-weight: bold;              /* Aplica o estilo em negrito ao texto do logo */
+}
+
+/* Contêiner dos links da navegação no menu */
+.nav-links {
+    display: flex;                  /* Organiza os hiperlinks em formato de linha horizontal */
+    gap: 20px;                      /* Espaçamento interno de 20px entre os links do menu */
+}
+
+/* Formatação dos links dentro da barra de navegação */
+.nav-links a {
+    color: #cbd5e1;                 /* Cor inicial dos links em um tom azul-acinzentado claro */
+    text-decoration: none;          /* Remove a linha sublinhada padrão dos links do navegador */
+    font-weight: 500;               /* Define a espessura média da fonte */
+    transition: color 0.3s;         /* Define a animação suave de 0.3 segundos ao mudar de cor no passar do mouse */
+}
+
+/* Regra encadeada para estados de sobreposição do mouse (:hover) e link ativo (.active) */
+.nav-links a:hover, .nav-links a.active {
+    color: white;                   /* Destaca o link ativo ou com o mouse por cima mudando a cor do texto para branco */
+}
